@@ -4,8 +4,8 @@
 Learn music-making fundamentals by teaching a curious, freshly-landed alien about what music is!
 This concept expands on the idea that you learn efficiently by teaching the same principles you want to further understand. By beginning with the foundations and engaging directly, the player becomes part of the experience and learns more as they go. The basic tools introduced to the player help showcase music fundamentals and build foundations for how to make your own music.
 
-Game Design/Mechanics: Interact with on-screen buttons/instruments, create loops, beats, etc. Interact with and respond to the alien.
-Visuals/Design/Sound: Low-poly, fun. Original sound and music.
+* Game Design/Mechanics: Interact with on-screen buttons/instruments, create loops, beats, etc. Interact with and respond to the alien.
+* Visuals/Design/Sound: Low-poly, fun. Original sound and music.
 
 Learning Outcomes: Music-creation essentials, how to create beats, how to layer sounds and utilize sound.
 
