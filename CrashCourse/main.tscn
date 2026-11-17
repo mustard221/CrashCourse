@@ -1,0 +1,47 @@
+[gd_scene format=3 uid="uid://c7p0qqdxp7u8y"]
+
+[ext_resource type="PackedScene" uid="uid://clc5dre31iskm" path="res://addons/godot-xr-tools/xr/start_xr.tscn" id="1_ig7tw"]
+[ext_resource type="PackedScene" uid="uid://dseyovb4xurar" path="res://player.tscn" id="2_h2yge"]
+[ext_resource type="Script" uid="uid://bbynjjlaox1hh" path="res://Button.gd" id="3_h2yge"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_lquwl"]
+sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+ground_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+
+[sub_resource type="Sky" id="Sky_7mycd"]
+sky_material = SubResource("ProceduralSkyMaterial_lquwl")
+
+[sub_resource type="Environment" id="Environment_272bh"]
+background_mode = 2
+sky = SubResource("Sky_7mycd")
+glow_enabled = true
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_l88ol"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xqvqk"]
+transparency = 1
+blend_mode = 1
+
+[sub_resource type="BoxMesh" id="BoxMesh_l88ol"]
+material = SubResource("StandardMaterial3D_xqvqk")
+
+[node name="main" type="Node3D" unique_id=15474282]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1810607674]
+environment = SubResource("Environment_272bh")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=74512531]
+transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0, 0)
+shadow_enabled = true
+
+[node name="StartXR" parent="." unique_id=1576012015 instance=ExtResource("1_ig7tw")]
+
+[node name="XROrigin3D" parent="." unique_id=520470643 instance=ExtResource("2_h2yge")]
+
+[node name="Ground" type="MeshInstance3D" parent="." unique_id=1684179455]
+mesh = SubResource("PlaneMesh_l88ol")
+
+[node name="Button" type="MeshInstance3D" parent="." unique_id=1723351995]
+transform = Transform3D(0.05, 0, 0, 0, 0.05, 0, 0, 0, 0.05, 0, 0.15415654, -0.46219695)
+mesh = SubResource("BoxMesh_l88ol")
+script = ExtResource("3_h2yge")
